@@ -18,10 +18,10 @@ public class HomePage {
 	
 	public HomePage(WebDriver driver,FluentWait<WebDriver> wait)
 	{
+		//For lazy initialization
 		PageFactory.initElements(driver,this);
 		this.driver=driver;
 		this.wait=wait;
-		
 	}
 	
  
