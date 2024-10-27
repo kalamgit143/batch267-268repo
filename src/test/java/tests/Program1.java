@@ -11,7 +11,7 @@ public class Program1
 	@Test
 	public void method()
 	{
-		List<String> names=Arrays.asList("kalam","bros","steave","sisters","ratan");
+		List<String> names=Arrays.asList("kalam","bros","steave","sisters","ratan","students");
 		List<String> result=names.stream().sorted().collect(Collectors.toList());
         System.out.println("Output: "+result);
 	}
