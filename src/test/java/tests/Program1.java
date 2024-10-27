@@ -1,9 +1,8 @@
 package tests;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class Program1
@@ -12,11 +11,18 @@ public class Program1
 	public void method()
 	{
 		//Sort the given list of strings using java streams
-		List<String> names=Arrays.asList("kalam","bros","steave","sisters","ratan","students");
-		List<String> result=names.stream().sorted().collect(Collectors.toList());
-		for(String name:result)
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.google.com/");
+		driver.manage().window().maximize();
+		if(driver.getTitle().equals("Google"))
 		{
-			System.out.println(name);
-		} 
+			Reporter.log("Test case passed");
+		}
+		else
+		{
+			Reporter.log("Test case failed");
+		}
+		driver.quit();
+		
 	}
 }
