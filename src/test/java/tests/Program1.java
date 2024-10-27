@@ -14,6 +14,9 @@ public class Program1
 		//Sort the given list of strings using java streams
 		List<String> names=Arrays.asList("kalam","bros","steave","sisters","ratan","students");
 		List<String> result=names.stream().sorted().collect(Collectors.toList());
-        System.out.println("Output: "+result);
+		for(String name:result)
+		{
+			System.out.println(name);
+		} 
 	}
 }
